@@ -1,0 +1,37 @@
+.quality__list {
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.quality__item {
+    width: 270px;
+}
+
+.quality__item+.quality__item {
+    margin-left: 30px;
+}
+
+.quality__title {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $second-text-color;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.quality__text {
+    line-height: 1.7;
+}
+
+.quality__container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    background-color: $portfolio-button;
+    margin: 0;
+    margin-bottom: 30px;
+}
