@@ -1,5 +1,10 @@
 .join {
     margin-left: 93px;
+    @media screen and (max-width:1199px) {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .join__title {
@@ -9,17 +14,28 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $white-color;
+    @media screen and (max-width:1199px) {
+        text-align: center;
+    }
 }
 
 .send-button {
     display: flex;
     margin-left: 12px;
+    @media screen and (max-width:1199px) {
+        margin: 0;
+        justify-content: center;
+        }
 }
 
 .join__form {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width:1199px) {
+        display: block;
+
+    }
 }
 
 .send-button__button {
@@ -69,5 +85,17 @@
         border-radius: 4px;
         color: $white-color;
     }
+    @media screen and (max-width:767px) {
+            margin-bottom: 20px;
+            display: block;
+            width: 100%;
+    }
+    @media screen and (max-width:1199px) {
+            margin: 0 auto;
+            margin-bottom: 20px;
+            display: block;
+            width: 450px;
+    }
+
 }
 

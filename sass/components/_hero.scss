@@ -8,31 +8,62 @@
 
 .overlay {
     max-width: 1600px;
-    height: 600px;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient(to right, #2f303a66 0%, #2f303a66 100%),
-        url('../images/img-hero.jpg');
     background-position: center;
+    background-image: linear-gradient(to right, #2f303a66 0%, #2f303a66 100%),
+        url('../images/mobile1x.jpg');
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, #2f303a66 0%, #2f303a66 100%),
+                    url('../images/mobile2x.jpg');
+        }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        background-image: linear-gradient(to right, #2f303a66 0%, #2f303a66 100%),
+                url('../images/tablet1x.jpg');
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right, #2f303a66 0%, #2f303a66 100%),
+                    url('../images/tablet2x.jpg');
+        }
+    }
+        @media screen and (min-width: 768px) {
+            background-image: linear-gradient(to right, #2f303a66 0%, #2f303a66 100%),
+                url('../images/img-hero.jpg');
+    
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right, #2f303a66 0%, #2f303a66 100%),
+                    url('../images/hero2x.jpg');
+            }
+    }
 }
 
 .hero__title {
     margin: 0 auto;
     margin-bottom: 30px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.4;
+    font-size: 26px;
+    line-height: 1.6;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $white-color;
     max-width: 696px;
+    @media screen and (min-width: 768px) {
+        font-size: 44px;
+        line-height: 1.4;
+    }
 }
 
 .hero__button {
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    padding: 10px 32px;
+    padding: 10px 24px;
     background-color: $accent-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -46,5 +77,8 @@
     &:hover,
     &:focus {
         background-color: $button-hero-active;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 10px 32px;
     }
 }
