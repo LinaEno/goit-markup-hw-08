@@ -1,4 +1,4 @@
-.nav-menu__logo {
+.logo {
     display: block;
     padding-top: 24px;
     padding-bottom: 25px;
@@ -10,7 +10,7 @@
     font-family: $font-family-logo;
     line-height: 1.2;
 
-    &--accent {
+    &__accent {
         color: $accent-color;
     }
     @media screen and (max-width:767px) {
@@ -18,13 +18,17 @@
             padding-bottom: 16px;
             font-size: 24px;
             margin-right: 0;
-    }
+                }
     @media screen and (max-width:1199px) {
             padding-top: 26px;
             padding-bottom: 26px;
             font-size: 24px;
             margin-right: 87;
         }
+}
+
+.mobile.is-open .logo {
+    display: none;
 }
 
 .footer__logo {

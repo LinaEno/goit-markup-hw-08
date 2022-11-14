@@ -77,6 +77,7 @@ img {
 
 .page-header {
   border-bottom: 1px solid #ececec;
+  position: relative;
 }
 
 .header {
@@ -86,7 +87,7 @@ img {
   align-items: center;
 }
 
-.nav-menu__logo {
+.logo {
   display: block;
   padding-top: 24px;
   padding-bottom: 25px;
@@ -98,11 +99,11 @@ img {
   font-family: "Raleway", sans-serif;
   line-height: 1.2;
 }
-.nav-menu__logo--accent {
+.logo__accent {
   color: #2196f3;
 }
 @media screen and (max-width: 767px) {
-  .nav-menu__logo {
+  .logo {
     padding-top: 16px;
     padding-bottom: 16px;
     font-size: 24px;
@@ -110,12 +111,16 @@ img {
   }
 }
 @media screen and (max-width: 1199px) {
-  .nav-menu__logo {
+  .logo {
     padding-top: 26px;
     padding-bottom: 26px;
     font-size: 24px;
     margin-right: 87;
   }
+}
+
+.mobile.is-open .logo {
+  display: none;
 }
 
 .footer__logo {
@@ -156,6 +161,12 @@ img {
   .nav-menu__list--contacts {
     display: block;
     padding: 21px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav-menu__list--contacts {
+    display: flex;
+    margin-left: auto;
   }
 }
 
@@ -235,6 +246,55 @@ img {
   }
 }
 
+.mobile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.mobile .mobile-icons__icon-menu {
+  display: none;
+}
+
+.mobile.is-open .mobile-icons__icon-menu {
+  display: block;
+}
+
+.mobile.is-open .mobile-icons__icon-close {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile__content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 796px;
+    background-color: #ffffff;
+  }
+  .mobile__content.is-open {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile__content {
+    display: flex;
+    align-items: center;
+  }
+}
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -924,6 +984,11 @@ img {
   background-color: #ffffff;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 1199px) {
+  .form-modal {
+    width: 450px;
+  }
+}
 
 .form-modal__button {
   position: absolute;
@@ -952,6 +1017,11 @@ img {
   width: 448px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1199px) {
+  .callback {
+    width: 370px;
+  }
+}
 
 .callback__title {
   margin: 40px 0 30px 0px;
@@ -961,6 +1031,11 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+@media screen and (max-width: 1199px) {
+  .callback__title {
+    line-height: 1.5;
+  }
 }
 
 .callback__input {
@@ -978,6 +1053,11 @@ img {
 .callback__input:focus {
   border-color: #2196f3;
 }
+@media screen and (max-width: 1199px) {
+  .callback__input {
+    width: 370px;
+  }
+}
 
 .callback__input:focus + .callback__icon {
   fill: #2196f3;
@@ -987,6 +1067,11 @@ img {
   position: relative;
   margin-bottom: 28px;
   color: #212121;
+}
+@media screen and (max-width: 1199px) {
+  .callback__field--tablet {
+    margin-bottom: 20px;
+  }
 }
 
 .callback__label {
@@ -1076,6 +1161,12 @@ img {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 1199px) {
+  .callback__checkbox-label {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+}
 
 .callback__button {
   text-align: center;
@@ -1100,6 +1191,11 @@ img {
 }
 .callback__send-button:hover, .callback__send-button:focus {
   background-color: #188ce8;
+}
+@media screen and (max-width: 1199px) {
+  .callback__send-button {
+    margin-bottom: 40px;
+  }
 }
 
 .portfolio-list {

@@ -34,6 +34,9 @@
     min-height: 581px;
     background-color: $white-color;
     @include transitionM(transform);
+    @media screen and (max-width:1199px) {
+        width: 450px;
+    }
 }
 
 .form-modal__button {
@@ -63,6 +66,10 @@
 .callback {
     width: 448px;
     margin: 0 auto;
+    @media screen and (max-width:1199px) {
+            width: 370px;
+    
+        }
 }
 
 .callback__title {
@@ -73,6 +80,9 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: $second-text-color;
+    @media screen and (max-width:1199px) {
+            line-height: 1.5;
+        }
 }
 
 .callback__input {
@@ -89,6 +99,10 @@
     &:focus {
         border-color: $accent-color;
     }
+    @media screen and (max-width:1199px) {
+            width: 370px;
+
+    }
 }
 
 .callback__input:focus+.callback__icon {
@@ -99,6 +113,12 @@
     position: relative;
     margin-bottom: 28px;
     color: $second-text-color;
+    @media screen and (max-width:1199px) {
+            &--tablet {
+                margin-bottom: 20px;
+            }
+    
+        }
 }
 
 .callback__label {
@@ -165,6 +185,7 @@
     border-radius: 2px;
     @include transitionM(border);
     @include transitionM(background-color);
+    
 }
 
 .callback__link {
@@ -187,6 +208,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width:1199px) {
+            font-size: 12px;
+            line-height: 1.2;
+        }
 }
 
 .callback__button {
@@ -213,6 +238,9 @@
     &:focus {
         background-color: $button-hero-active;
     }
-
+        @media screen and (max-width:1199px) {
+            margin-bottom: 40px;
+        }
 }
+
 
