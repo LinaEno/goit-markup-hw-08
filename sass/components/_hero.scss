@@ -12,6 +12,8 @@
     margin-left: auto;
     margin-right: auto;
     background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
     background-image: linear-gradient(to right, #2f303a66 0%, #2f303a66 100%),
         url('../images/mobile1x.jpg');
         @media (min-device-pixel-ratio: 2),
