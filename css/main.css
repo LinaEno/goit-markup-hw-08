@@ -277,7 +277,25 @@ img {
   fill: #2196f3;
 }
 
-.mobile-icons__icon-close, .mobile-icons__icon-menu {
+.mobile.is-open {
+  /*position: absolute;
+
+  z-index: 100;*/
+}
+
+/*.mobile__content.is-open .mobile {
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 100;
+}*/
+.mobile-icons__icon-close {
+  fill: currentColor;
+  width: 19px;
+  height: 19px;
+}
+
+.mobile-icons__icon-menu {
   fill: currentColor;
 }
 
@@ -285,6 +303,9 @@ img {
   display: none;
 }
 
+/*.mobile .mobile-icons__icon-close {
+    display: block;
+}*/
 .mobile.is-open .mobile-icons__icon-menu {
   display: block;
 }
@@ -353,15 +374,19 @@ img {
   font-size: 34px;
 }
 
-.mobile__link, .mobile-contact__link {
+.mobile__link,
+.mobile-contact__link {
   color: #212121;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mobile__link:hover, .mobile__link:focus, .mobile-contact__link:hover, .mobile-contact__link:focus {
+.mobile__link:hover, .mobile__link:focus,
+.mobile-contact__link:hover,
+.mobile-contact__link:focus {
   color: #2196f3;
 }
 
-.mobile__link--current, .mobile-contact__link--current {
+.mobile__link--current,
+.mobile-contact__link--current {
   color: #2196f3;
 }
 
