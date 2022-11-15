@@ -10,6 +10,7 @@
     width: 40px;
     background-color: transparent;
     border: none;
+    color:$black-color;
 
     @media screen and (min-width: 768px) {
         display: none;
@@ -17,24 +18,11 @@
 
     &:hover,
     &:focus {
-        fill: $accent-color;
+        color: $accent-color;
     }
 
-    transition: fill $time $cubic;
+    @include transitionM(color);
 }
-
-.mobile.is-open {
-    /*position: absolute;
-    
-    z-index: 100;*/
-}
-
-/*.mobile__content.is-open .mobile {
-    position: absolute;
-    top:0;
-    right:0;
-    z-index: 100;
-}*/
 
 .mobile-icons__icon-close {
     fill: currentColor;
@@ -49,10 +37,6 @@
 .mobile .mobile-icons__icon-menu {
     display: none;
 }
-
-/*.mobile .mobile-icons__icon-close {
-    display: block;
-}*/
 
 .mobile.is-open .mobile-icons__icon-menu {
     display: block;
@@ -137,7 +121,7 @@
         color: $accent-color;
     }
 
-    transition: color $time $cubic;
+    @include transitionM(color);
 }
 
 .mobile__link--current,
