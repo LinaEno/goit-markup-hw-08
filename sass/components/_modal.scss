@@ -34,9 +34,10 @@
     padding: 40px;
     background-color: $white-color;
     @include transitionM(transform);
-    @media screen and (max-width:1199px) {
-        max-width: 450px;
-    }
+    
+    max-width: 528px;
+    width: 90%;
+    
 }
 
 .form-modal__button {
@@ -65,12 +66,8 @@
 }
 
 .callback {
-    max-width: 448px;
+
     margin: 0 auto;
-    @media screen and (max-width:1199px) {
-            max-width: 370px;
-    
-        }
 }
 
 .callback__title {
