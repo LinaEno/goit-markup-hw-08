@@ -1,4 +1,4 @@
-.mobile {
+/*.mobile {
     z-index: 2;
     display: inline-flex;
     align-items: center;
@@ -11,7 +11,9 @@
     background-color: transparent;
     border: none;
     color:$black-color;
-
+    position: fixed;
+    top: 10px;
+    right: 15px;
     @media screen and (min-width: 768px) {
         display: none;
     }
@@ -22,28 +24,71 @@
     }
 
     @include transitionM(color);
+}*/
+
+.mobile-open {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-left: auto;
+    background-color: $white-color;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+    &:hover,
+    &:focus {
+            color: $accent-color;
+        }
+    
+        @include transitionM(color);
+}
+
+.mobile-close {
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    background-color:$white-color;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 15;
+
+    &:hover,
+    &:focus {
+            color: $accent-color;
+        }
+    
+        @include transitionM(color);
+}
+
+.mobile-icons {
+    flex-shrink: 0;
 }
 
 .mobile-icons__icon-close {
     fill: currentColor;
-    width: 19px;
-    height:19px;
 }
 
 .mobile-icons__icon-menu {
     fill: currentColor;
 }
 
-.mobile .mobile-icons__icon-menu {
+.mobile-close .mobile-icons__icon-menu {
     display: none;
 }
 
-.mobile.is-open .mobile-icons__icon-menu {
+.mobile-open .mobile-icons__icon-menu {
     display: block;
 
 }
 
-.mobile.is-open .mobile-icons__icon-close {
+.mobile-open .mobile-icons__icon-close {
     display: none;
 }
 
@@ -57,7 +102,7 @@
         height: 100%;
         background-color: $white-color;
         z-index: 1;
-
+        padding: 48px 15px 48px 40px;
         &.is-open {
             display: flex;
             flex-direction: column;
@@ -71,16 +116,6 @@
     .mobile__content {
         display: none;
     }
-}
-
-.mobile__list {
-    margin-left: 40px;
-    margin-top: 48px;
-}
-
-.mobile-contact__list {
-    margin-left: 40px;
-
 }
 
 .mobile__item {
@@ -133,7 +168,6 @@
 .mobile-social {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 40px;
 }
 
 .mobile-social__list {

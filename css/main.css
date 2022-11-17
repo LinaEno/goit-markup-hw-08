@@ -255,49 +255,92 @@ img {
   }
 }
 
-.mobile {
-  z-index: 2;
+/*.mobile {
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    color:$black-color;
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    @include transitionM(color);
+}*/
+.mobile-open {
+  width: 40px;
+  height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  margin-left: auto;
-  padding: 0;
-  height: 40px;
-  width: 40px;
-  background-color: transparent;
   border: none;
-  color: #000000;
+  margin-left: auto;
+  background-color: #ffffff;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
-  .mobile {
+  .mobile-open {
     display: none;
   }
 }
-.mobile:hover, .mobile:focus {
+.mobile-open:hover, .mobile-open:focus {
   color: #2196f3;
+}
+
+.mobile-close {
+  position: fixed;
+  right: 15px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-close:hover, .mobile-close:focus {
+  color: #2196f3;
+}
+
+.mobile-icons {
+  flex-shrink: 0;
 }
 
 .mobile-icons__icon-close {
   fill: currentColor;
-  width: 19px;
-  height: 19px;
 }
 
 .mobile-icons__icon-menu {
   fill: currentColor;
 }
 
-.mobile .mobile-icons__icon-menu {
+.mobile-close .mobile-icons__icon-menu {
   display: none;
 }
 
-.mobile.is-open .mobile-icons__icon-menu {
+.mobile-open .mobile-icons__icon-menu {
   display: block;
 }
 
-.mobile.is-open .mobile-icons__icon-close {
+.mobile-open .mobile-icons__icon-close {
   display: none;
 }
 
@@ -311,6 +354,7 @@ img {
     height: 100%;
     background-color: #ffffff;
     z-index: 1;
+    padding: 48px 15px 48px 40px;
   }
   .mobile__content.is-open {
     display: flex;
@@ -324,15 +368,6 @@ img {
     display: none;
   }
 }
-.mobile__list {
-  margin-left: 40px;
-  margin-top: 48px;
-}
-
-.mobile-contact__list {
-  margin-left: 40px;
-}
-
 .mobile__item {
   font-weight: 500;
   font-size: 40px;
@@ -380,7 +415,6 @@ img {
 .mobile-social {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 40px;
 }
 
 .mobile-social__list {
